@@ -78,13 +78,16 @@ def create_composite_image(bg_img, prod1_img, text1, text2, btn_text, font_sourc
             img1 = remove(prod1_img)
             images.append(img1)
     
-    # --- 位置與尺寸調整區 ---
-    # 位置：維持 y=310
-    start_y = 310
+    # --- 位置與尺寸調整區 (修正版) ---
     
-    # 尺寸：120% (與雙商品版一致的縮放係數)
-    scale_factor_w = 0.84 
-    scale_factor_h = 1.2 
+    # 位置：往下移 20px (原 310 -> 改 330)
+    start_y = 330
+    
+    # 尺寸：再放大 120% 
+    # 原係數 0.84 * 1.2 = 1.008
+    scale_factor_w = 1.008
+    # 原係數 1.2 * 1.2 = 1.44
+    scale_factor_h = 1.44
     
     target_w = prod_area_w * scale_factor_w
     target_h = prod_area_h * scale_factor_h
