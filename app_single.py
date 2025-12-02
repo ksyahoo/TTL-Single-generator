@@ -80,13 +80,11 @@ def create_composite_image(bg_img, prod1_img, text1, text2, btn_text, font_sourc
     
     # --- 位置與尺寸調整區 (修正版) ---
     
-    # 位置：往下移 20px (原 310 -> 改 330)
-    start_y = 330
+    # 位置：上移 40px (原 330 -> 改 290)
+    start_y = 290
     
-    # 尺寸：再放大 120% 
-    # 原係數 0.84 * 1.2 = 1.008
+    # 尺寸：維持放大倍率
     scale_factor_w = 1.008
-    # 原係數 1.2 * 1.2 = 1.44
     scale_factor_h = 1.44
     
     target_w = prod_area_w * scale_factor_w
